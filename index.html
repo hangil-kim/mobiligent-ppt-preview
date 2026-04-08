@@ -3,279 +3,203 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>모빌리전트 PPT 디자인 미리보기</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>모빌리전트 PPT 디자인 미리보기 v2</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 <style>
 :root {
   --navy: #1B3A5C;
+  --navy-dark: #142d4a;
   --blue: #2A6496;
   --blue-light: #4A8BC2;
   --blue-pale: #E8F0F8;
+  --blue-bg: #F4F8FC;
   --accent: #D4943A;
+  --accent-light: #F5E6D0;
+  --green: #10B981;
+  --green-light: #D1FAE5;
+  --red: #EF4444;
+  --red-light: #FEE2E2;
   --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
   --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
   --gray-500: #6B7280;
   --gray-700: #374151;
   --gray-900: #111827;
   --white: #FFFFFF;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --radius: 12px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; background: #E5E7EB; padding: 40px 20px; }
 
-body {
-  font-family: 'Noto Sans KR', 'Pretendard', 'Malgun Gothic', sans-serif;
-  background: #E5E7EB;
-  padding: 40px 20px;
-}
+h1.page-title { text-align: center; font-size: 24px; color: var(--navy); margin-bottom: 8px; }
+p.page-desc { text-align: center; font-size: 14px; color: var(--gray-500); margin-bottom: 40px; }
 
-h1.page-title {
+.slide-wrapper { max-width: 960px; margin: 0 auto 48px; }
+.slide-label { font-size: 13px; font-weight: 700; color: var(--gray-500); margin-bottom: 8px; }
+.slide { width: 100%; aspect-ratio: 16/9; border-radius: 8px; box-shadow: var(--shadow-lg); overflow: hidden; position: relative; }
+.slide-inner { width: 100%; height: 100%; position: relative; }
+
+/* ── 페이지 번호 ── */
+.page-num { position: absolute; bottom: 16px; right: 24px; font-size: 11px; color: var(--gray-500); font-weight: 500; }
+.page-num.white { color: rgba(255,255,255,0.35); }
+
+/* ── 상단 브랜드 바 ── */
+.brand-bar { position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--navy), var(--blue), var(--blue-light)); }
+.brand-watermark { position: absolute; bottom: 16px; left: 24px; font-size: 10px; color: var(--gray-300); font-weight: 600; letter-spacing: 1px; }
+
+/* ══════════════════════════════════════ */
+/* 슬라이드 1: 표지 */
+/* ══════════════════════════════════════ */
+.cover {
+  background: linear-gradient(135deg, #0f2438 0%, #1B3A5C 35%, #2A5A80 70%, #3d7ab5 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 24px;
-  color: var(--navy);
-  margin-bottom: 12px;
 }
-p.page-desc {
-  text-align: center;
-  font-size: 14px;
-  color: var(--gray-500);
-  margin-bottom: 40px;
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(42,100,150,0.25) 0%, transparent 70%);
+  border-radius: 50%;
 }
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212,148,58,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.cover-content { position: relative; z-index: 1; }
+.cover .company { font-size: 48px; font-weight: 800; letter-spacing: -1px; margin-bottom: 4px; }
+.cover .company-en { font-size: 14px; font-weight: 400; opacity: 0.5; letter-spacing: 4px; margin-bottom: 20px; }
+.cover .divider { width: 60px; height: 3px; background: var(--accent); margin: 0 auto 20px; border-radius: 2px; }
+.cover .subtitle { font-size: 20px; font-weight: 500; opacity: 0.9; margin-bottom: 8px; }
+.cover .slogan { font-size: 13px; opacity: 0.5; font-style: italic; margin-bottom: 40px; }
+.cover .meta { font-size: 11px; opacity: 0.4; line-height: 1.8; }
 
-/* ── 슬라이드 프레임 ── */
-.slide-wrapper {
-  max-width: 960px;
-  margin: 0 auto 48px;
-}
-.slide-label {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--gray-500);
-  margin-bottom: 8px;
-  padding-left: 4px;
-}
-.slide {
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 8px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  overflow: hidden;
-  position: relative;
-}
-
-/* ── 공통 슬라이드 내부 ── */
-.slide-inner {
-  width: 100%;
-  height: 100%;
+/* ══════════════════════════════════════ */
+/* 내용 슬라이드 공통 */
+/* ══════════════════════════════════════ */
+.content {
+  background: var(--white);
   padding: 50px 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-
-/* ── 표지 (네이비 배경) ── */
-.slide-cover {
-  background: linear-gradient(135deg, #142d4a 0%, #1B3A5C 40%, #2A5A80 100%);
-  color: var(--white);
-  text-align: center;
-}
-.slide-cover .company { font-size: 42px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
-.slide-cover .subtitle { font-size: 18px; font-weight: 400; opacity: 0.85; letter-spacing: 1px; margin-bottom: 32px; }
-.slide-cover .slogan { font-size: 14px; opacity: 0.6; font-style: italic; margin-bottom: 40px; }
-.slide-cover .meta { font-size: 12px; opacity: 0.5; line-height: 1.8; }
-
-/* ── 내용 슬라이드 (화이트 배경) ── */
-.slide-content {
-  background: var(--white);
-  color: var(--gray-900);
-}
-
-/* 슬라이드 제목 */
 .s-title {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 28px;
-  padding-bottom: 12px;
-  border-bottom: 3px solid var(--blue);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 28px;
 }
-.s-title i { color: var(--blue); font-size: 22px; }
-
-/* 강조 숫자 카드 */
-.stat-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 24px;
-}
-.stat-card {
-  flex: 1;
+.s-title .icon-circle {
+  width: 40px;
+  height: 40px;
   background: linear-gradient(135deg, var(--navy), var(--blue));
   border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  color: var(--white);
-}
-.stat-card .number {
-  font-size: 36px;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 1.2;
-}
-.stat-card .label {
-  font-size: 12px;
-  opacity: 0.8;
-  margin-top: 4px;
-}
-
-/* 카드형 레이아웃 */
-.card-row {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.card {
-  flex: 1;
-  background: var(--blue-pale);
-  border-left: 4px solid var(--blue);
-  border-radius: 0 8px 8px 0;
-  padding: 16px 18px;
-}
-.card h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-.card p, .card li {
-  font-size: 12px;
-  color: var(--gray-700);
-  line-height: 1.6;
-}
-.card ul { padding-left: 16px; margin: 0; }
-.card li { margin-bottom: 2px; }
-.card.accent { border-left-color: var(--accent); }
-.card.accent h4 { color: var(--accent); }
-
-/* 표 */
-.s-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12px;
-  margin-bottom: 16px;
-}
-.s-table th {
-  background: var(--navy);
-  color: var(--white);
-  padding: 10px 14px;
-  text-align: left;
-  font-weight: 600;
-}
-.s-table td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--gray-200);
-}
-.s-table tr:nth-child(even) td { background: var(--gray-50); }
-
-/* 프로필 카드 */
-.profile-row {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 16px;
-}
-.profile {
-  flex: 1;
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
-  border-radius: 10px;
-  padding: 20px;
-}
-.profile .name {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 4px;
-}
-.profile .role {
-  font-size: 11px;
-  color: var(--blue);
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.profile li {
-  font-size: 11px;
-  color: var(--gray-700);
-  line-height: 1.7;
-}
-.profile ul { padding-left: 16px; margin: 0; }
-
-/* 타임라인 */
-.timeline {
-  display: flex;
-  gap: 16px;
-}
-.timeline-item {
-  flex: 1;
-  border-top: 4px solid var(--blue);
-  padding-top: 12px;
-}
-.timeline-item.active { border-top-color: var(--accent); }
-.timeline-item.future { border-top-color: var(--gray-200); }
-.timeline-item h4 {
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-.timeline-item li {
-  font-size: 11px;
-  color: var(--gray-700);
-  line-height: 1.7;
-}
-.timeline-item ul { padding-left: 14px; margin: 0; }
-.timeline-item .revenue {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--accent);
-  margin-top: 8px;
-}
-
-/* 2단 레이아웃 */
-.two-col {
-  display: flex;
-  gap: 24px;
-}
-.two-col > div { flex: 1; }
-
-/* 태그 */
-.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.tag {
-  display: inline-block;
-  background: var(--navy);
-  color: var(--white);
-  font-size: 10px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 14px;
-}
-
-/* 포인트 리스트 */
-.point-list { list-style: none; padding: 0; }
-.point-list li {
-  font-size: 13px;
-  color: var(--gray-700);
-  padding: 8px 0;
-  border-bottom: 1px solid var(--gray-200);
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  flex-shrink: 0;
 }
-.point-list li:last-child { border-bottom: none; }
-.point-list .icon {
-  width: 32px;
-  height: 32px;
+.s-title .icon-circle i { color: var(--white); font-size: 16px; }
+.s-title h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+}
+.s-title .subtitle-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), transparent);
+  margin-left: 12px;
+}
+
+/* ── 강조 수치 카드 v2 ── */
+.stat-row { display: flex; gap: 16px; margin-bottom: 20px; }
+.stat-card-v2 {
+  flex: 1;
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s;
+}
+.stat-card-v2::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+.stat-card-v2 .stat-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+.stat-card-v2 .stat-icon i { color: var(--accent); font-size: 14px; }
+.stat-card-v2 .number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+}
+.stat-card-v2 .label {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.stat-card-v2.featured { transform: scale(1.03); }
+
+/* ── 정보 카드 v2 ── */
+.card-row { display: flex; gap: 14px; margin-bottom: 16px; }
+.card-v2 {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.card-v2 .card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.card-v2 .card-icon {
+  width: 28px;
+  height: 28px;
   background: var(--blue-pale);
   border-radius: 8px;
   display: flex;
@@ -283,82 +207,266 @@ p.page-desc {
   justify-content: center;
   flex-shrink: 0;
 }
-.point-list .icon i { color: var(--blue); font-size: 14px; }
+.card-v2 .card-icon i { color: var(--blue); font-size: 12px; }
+.card-v2 h4 { font-size: 14px; font-weight: 700; color: var(--navy); }
+.card-v2 p, .card-v2 li { font-size: 11px; color: var(--gray-700); line-height: 1.6; }
+.card-v2 ul { padding-left: 14px; margin: 0; }
+.card-v2 li { margin-bottom: 2px; }
+.card-v2.accent { border-left-color: var(--accent); }
+.card-v2.accent .card-icon { background: var(--accent-light); }
+.card-v2.accent .card-icon i { color: var(--accent); }
+.card-v2.green { border-left-color: var(--green); }
+.card-v2.green .card-icon { background: var(--green-light); }
+.card-v2.green .card-icon i { color: var(--green); }
+.card-v2.red { border-left-color: var(--red); }
+.card-v2.red .card-icon { background: var(--red-light); }
+.card-v2.red .card-icon i { color: var(--red); }
 
-/* 페이지 번호 */
-.page-num {
-  position: absolute;
-  bottom: 16px;
-  right: 24px;
-  font-size: 11px;
-  color: var(--gray-500);
+/* 카드 내 강조 수치 */
+.card-v2 .big-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-top: 6px;
 }
-.page-num.white { color: rgba(255,255,255,0.4); }
 
-/* 엔드 슬라이드 */
-.slide-end {
-  background: linear-gradient(135deg, #142d4a 0%, #1B3A5C 40%, #2A5A80 100%);
-  color: var(--white);
-  text-align: center;
-}
-.slide-end .msg { font-size: 16px; opacity: 0.8; max-width: 600px; margin: 0 auto 28px; line-height: 1.8; }
-.slide-end .contact { font-size: 12px; opacity: 0.5; line-height: 2; }
-
-/* 구조 다이어그램 */
-.diagram {
+/* ── 플랫폼 다이어그램 v2 ── */
+.diagram-v2 {
   background: var(--gray-50);
   border: 1px solid var(--gray-200);
-  border-radius: 10px;
-  padding: 16px;
+  border-radius: var(--radius);
+  padding: 20px 24px;
   margin-bottom: 16px;
 }
 .diagram-layer {
   display: flex;
   gap: 8px;
   justify-content: center;
+  margin-bottom: 6px;
+}
+.diagram-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.diagram-badge .badge-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-pale);
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diagram-badge .badge-icon i { color: var(--blue); font-size: 14px; }
+.diagram-badge span { font-size: 10px; font-weight: 600; color: var(--navy); }
+.diagram-core {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  border-radius: 10px;
+  padding: 12px 32px;
+  text-align: center;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: var(--shadow-md);
+  margin: 0 auto;
+  width: fit-content;
+}
+.diagram-core i { font-size: 16px; color: var(--accent); }
+.diagram-arrow { text-align: center; color: var(--blue-light); font-size: 16px; margin: 4px 0; }
+.diagram-bottom {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.diagram-bottom-item {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gray-700);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── 프로필 카드 v2 ── */
+.profile-row { display: flex; gap: 16px; margin-bottom: 16px; }
+.profile-v2 {
+  flex: 1;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 16px;
+}
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--white);
+}
+.profile-info { flex: 1; }
+.profile-info .name { font-size: 16px; font-weight: 800; color: var(--navy); }
+.profile-info .role { font-size: 11px; color: var(--blue); font-weight: 600; margin-bottom: 8px; }
+.profile-info .exp-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 10px;
   margin-bottom: 8px;
 }
-.diagram-box {
-  background: var(--blue-pale);
-  border: 1px solid var(--blue);
-  border-radius: 6px;
-  padding: 6px 14px;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--navy);
+.profile-info li { font-size: 10px; color: var(--gray-700); line-height: 1.7; }
+.profile-info ul { padding-left: 14px; margin: 0; }
+
+/* ── 타임라인 v2 ── */
+.timeline-v2 { display: flex; gap: 16px; position: relative; margin-bottom: 16px; }
+.timeline-v2::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gray-200);
+  z-index: 0;
+}
+.tl-item {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+.tl-node {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+.tl-item.current .tl-node { background: linear-gradient(135deg, var(--navy), var(--blue)); }
+.tl-item.growth .tl-node { background: linear-gradient(135deg, var(--accent), #c07a20); }
+.tl-item.future .tl-node { background: var(--gray-300); color: var(--gray-700); }
+.tl-body {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
   text-align: center;
 }
-.diagram-box.core {
+.tl-item.current .tl-body { border-top: 3px solid var(--blue); }
+.tl-item.growth .tl-body { border-top: 3px solid var(--accent); }
+.tl-item.future .tl-body { border-top: 3px solid var(--gray-300); }
+.tl-body h4 { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.tl-body li { font-size: 10px; color: var(--gray-700); text-align: left; line-height: 1.6; }
+.tl-body ul { padding-left: 14px; margin: 0; }
+.tl-body .revenue { font-size: 24px; font-weight: 800; color: var(--accent); margin-top: 8px; }
+
+/* ── 태그 ── */
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tag {
   background: var(--navy);
   color: var(--white);
-  border-color: var(--navy);
-  padding: 10px 24px;
-  font-size: 13px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 14px;
 }
-.diagram-arrow {
+.tag.outline { background: transparent; border: 1px solid var(--blue); color: var(--blue); }
+
+/* ── 엔드 슬라이드 ── */
+.end {
+  background: linear-gradient(135deg, #0f2438 0%, #1B3A5C 35%, #2A5A80 70%, #3d7ab5 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: var(--blue);
-  font-size: 14px;
-  margin: 4px 0;
 }
+.end::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212,148,58,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.end-content { position: relative; z-index: 1; }
+.end .end-title { font-size: 32px; font-weight: 800; margin-bottom: 16px; line-height: 1.4; }
+.end .end-divider { width: 60px; height: 3px; background: var(--accent); margin: 0 auto 20px; border-radius: 2px; }
+.end .end-msg { font-size: 14px; opacity: 0.75; max-width: 550px; margin: 0 auto 28px; line-height: 1.8; }
+.end .end-contact { font-size: 12px; opacity: 0.4; line-height: 2; }
+
+/* ── 2단 레이아웃 ── */
+.two-col { display: flex; gap: 20px; }
+.two-col > div { flex: 1; }
+
+/* ── 비교 화살표 ── */
+.change-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.change-arrow .before { color: var(--red); }
+.change-arrow .arrow { color: var(--green); font-size: 16px; }
+.change-arrow .after { color: var(--green); }
+
+/* 컬러 팔레트 */
+.palette { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.palette-item { width: 90px; text-align: center; }
+.palette-swatch { height: 50px; border-radius: 8px; margin-bottom: 4px; box-shadow: var(--shadow-sm); }
+.palette-name { font-size: 10px; font-weight: 600; color: var(--gray-700); }
+.palette-hex { font-size: 9px; color: var(--gray-500); }
 </style>
 </head>
 <body>
 
-<h1 class="page-title">모빌리전트 PPT 디자인 미리보기</h1>
-<p class="page-desc">컬러·폰트·레이아웃·강조 방식을 확인하기 위한 예시 화면입니다. 실제 PPT와 동일한 비율(16:9)로 표시됩니다.</p>
+<h1 class="page-title">모빌리전트 PPT 디자인 미리보기 v2</h1>
+<p class="page-desc">컬러·레이아웃·강조 방식·시각적 계층 구조를 확인하기 위한 디자인 레퍼런스입니다.</p>
 
 <!-- ═══ 슬라이드 1: 표지 ═══ -->
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 1 — 표지</div>
   <div class="slide">
-    <div class="slide-inner slide-cover">
-      <div class="company">모빌리전트</div>
-      <div class="subtitle">AI 기반 통합 모빌리티 플랫폼</div>
-      <div class="slogan">"누구나, 언제나, 어디서나 이동할 자유"</div>
-      <div class="meta">
-        서울창업허브 성수 입주 지원 | 2026년 4월<br>
-        주식회사 모빌리전트 (Mobiligent Inc.)
+    <div class="slide-inner cover">
+      <div class="cover-content">
+        <div class="company">모빌리전트</div>
+        <div class="company-en">MOBILIGENT</div>
+        <div class="divider"></div>
+        <div class="subtitle">AI 기반 통합 모빌리티 플랫폼</div>
+        <div class="slogan">"누구나, 언제나, 어디서나 이동할 자유"</div>
+        <div class="meta">
+          서울창업허브 성수 입주 지원 | 2026년 4월<br>
+          주식회사 모빌리전트
+        </div>
       </div>
       <div class="page-num white">1</div>
     </div>
@@ -369,36 +477,57 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 2 — 문제 정의</div>
   <div class="slide">
-    <div class="slide-inner slide-content">
-      <div class="s-title"><i class="fas fa-exclamation-triangle"></i> 대한민국 이동의 사각지대</div>
+    <div class="slide-inner content">
+      <div class="brand-bar"></div>
+      <div class="s-title">
+        <div class="icon-circle"><i class="fas fa-exclamation-triangle"></i></div>
+        <h2>대한민국 이동의 사각지대</h2>
+        <div class="subtitle-line"></div>
+      </div>
+
       <div class="stat-row">
-        <div class="stat-card">
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
           <div class="number">1,746만</div>
-          <div class="label">교통약자 (인구의 33.7%)</div>
+          <div class="label">교통약자<br>(인구의 33.7%)</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card-v2 featured">
+          <div class="stat-icon"><i class="fas fa-user-clock"></i></div>
           <div class="number">초고령사회</div>
-          <div class="label">2025년 진입 (65세 이상 20.6%)</div>
+          <div class="label">2025년 진입<br>(65세 이상 20.6%)</div>
         </div>
-        <div class="stat-card">
-          <div class="number">40% 미만</div>
-          <div class="label">운송사 차량 자산 활용률</div>
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-bus"></i></div>
+          <div class="number">40%미만</div>
+          <div class="label">운송사 차량<br>자산 활용률</div>
         </div>
       </div>
+
       <div class="card-row">
-        <div class="card">
-          <h4><i class="fas fa-ban" style="color:#e74c3c; margin-right:4px;"></i> 기존 DRT</h4>
+        <div class="card-v2 red">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-lock"></i></div>
+            <h4>기존 DRT</h4>
+          </div>
           <p>B2G 중심, 폐쇄적 구조, 높은 수수료</p>
         </div>
-        <div class="card">
-          <h4><i class="fas fa-ban" style="color:#e74c3c; margin-right:4px;"></i> 빅테크 모빌리티</h4>
+        <div class="card-v2 red">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-eye-slash"></i></div>
+            <h4>빅테크 모빌리티</h4>
+          </div>
           <p>수익성 중심, 교통약자 외면</p>
         </div>
-        <div class="card">
-          <h4><i class="fas fa-ban" style="color:#e74c3c; margin-right:4px;"></i> 공공 복지콜</h4>
+        <div class="card-v2 red">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+            <h4>공공 복지콜</h4>
+          </div>
           <p>제한적 서비스, 긴 대기시간</p>
         </div>
       </div>
+
+      <div class="brand-watermark">MOBILIGENT</div>
       <div class="page-num">2</div>
     </div>
   </div>
@@ -408,45 +537,64 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 3 — 솔루션 (Camomile 플랫폼)</div>
   <div class="slide">
-    <div class="slide-inner slide-content">
-      <div class="s-title"><i class="fas fa-layer-group"></i> Camomile 통합 모빌리티 플랫폼</div>
+    <div class="slide-inner content">
+      <div class="brand-bar"></div>
+      <div class="s-title">
+        <div class="icon-circle"><i class="fas fa-layer-group"></i></div>
+        <h2>Camomile 통합 모빌리티 플랫폼</h2>
+        <div class="subtitle-line"></div>
+      </div>
 
-      <div class="diagram">
+      <div class="diagram-v2">
         <div class="diagram-layer">
-          <div class="diagram-box">통근버스</div>
-          <div class="diagram-box">DRT</div>
-          <div class="diagram-box">콜밴</div>
-          <div class="diagram-box">택시</div>
-          <div class="diagram-box">EV충전</div>
+          <div class="diagram-badge"><div class="badge-icon"><i class="fas fa-bus"></i></div><span>통근버스</span></div>
+          <div class="diagram-badge"><div class="badge-icon"><i class="fas fa-route"></i></div><span>DRT</span></div>
+          <div class="diagram-badge"><div class="badge-icon"><i class="fas fa-van-shuttle"></i></div><span>콜밴</span></div>
+          <div class="diagram-badge"><div class="badge-icon"><i class="fas fa-taxi"></i></div><span>택시</span></div>
+          <div class="diagram-badge"><div class="badge-icon"><i class="fas fa-charging-station"></i></div><span>EV충전</span></div>
         </div>
-        <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-        <div class="diagram-layer">
-          <div class="diagram-box core"><i class="fas fa-brain" style="margin-right:6px;"></i>AI 배차 엔진 + 실시간 최적화</div>
-        </div>
-        <div class="diagram-arrow"><i class="fas fa-arrow-down"></i></div>
-        <div class="diagram-layer">
-          <div class="diagram-box">기사앱</div>
-          <div class="diagram-box">승객앱</div>
-          <div class="diagram-box">관제시스템</div>
-          <div class="diagram-box">결제</div>
-          <div class="diagram-box">정산</div>
+        <div class="diagram-arrow"><i class="fas fa-angles-down"></i></div>
+        <div class="diagram-core"><i class="fas fa-brain"></i> AI 배차 엔진 + 실시간 최적화</div>
+        <div class="diagram-arrow"><i class="fas fa-angles-down"></i></div>
+        <div class="diagram-bottom">
+          <div class="diagram-bottom-item"><i class="fas fa-mobile-alt" style="margin-right:4px; color:var(--blue);"></i>기사앱</div>
+          <div class="diagram-bottom-item"><i class="fas fa-mobile-alt" style="margin-right:4px; color:var(--blue);"></i>승객앱</div>
+          <div class="diagram-bottom-item"><i class="fas fa-desktop" style="margin-right:4px; color:var(--blue);"></i>관제시스템</div>
+          <div class="diagram-bottom-item"><i class="fas fa-credit-card" style="margin-right:4px; color:var(--blue);"></i>결제</div>
+          <div class="diagram-bottom-item"><i class="fas fa-file-invoice" style="margin-right:4px; color:var(--blue);"></i>정산</div>
         </div>
       </div>
 
       <div class="card-row">
-        <div class="card">
-          <h4><i class="fas fa-recycle" style="color:var(--blue); margin-right:4px;"></i> 유휴 자산 극대화</h4>
-          <p>차량 활용률 40% → <b>85%</b> 향상</p>
+        <div class="card-v2">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-recycle"></i></div>
+            <h4>유휴 자산 극대화</h4>
+          </div>
+          <div class="change-arrow">
+            <span class="before">40%</span>
+            <span class="arrow"><i class="fas fa-arrow-right"></i></span>
+            <span class="after">85%</span>
+          </div>
+          <p style="margin-top:4px;">차량 활용률 2배 이상 향상</p>
         </div>
-        <div class="card">
-          <h4><i class="fas fa-heart" style="color:var(--blue); margin-right:4px;"></i> Age-Tech 특화</h4>
-          <p>음성 호출, 대형 UI, 보호자 연동</p>
+        <div class="card-v2 accent">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-heart"></i></div>
+            <h4>Age-Tech 특화</h4>
+          </div>
+          <p>음성 인식 호출, 대형 UI<br>보호자 연동, 휠체어 자동 배차</p>
         </div>
-        <div class="card">
-          <h4><i class="fas fa-shield-alt" style="color:var(--blue); margin-right:4px;"></i> 데이터 주권</h4>
-          <p>고객사 완전 소유, SaaS 구조</p>
+        <div class="card-v2 green">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>데이터 주권</h4>
+          </div>
+          <p>고객사 데이터 완전 소유<br>멀티테넌트 SaaS 구조</p>
         </div>
       </div>
+
+      <div class="brand-watermark">MOBILIGENT</div>
       <div class="page-num">3</div>
     </div>
   </div>
@@ -456,24 +604,41 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 4 — 기술 경쟁력</div>
   <div class="slide">
-    <div class="slide-inner slide-content">
-      <div class="s-title"><i class="fas fa-microchip"></i> 자체 개발 핵심 기술</div>
+    <div class="slide-inner content">
+      <div class="brand-bar"></div>
+      <div class="s-title">
+        <div class="icon-circle"><i class="fas fa-microchip"></i></div>
+        <h2>자체 개발 핵심 기술</h2>
+        <div class="subtitle-line"></div>
+      </div>
 
       <div class="card-row">
-        <div class="card">
-          <h4>Routomile (라우팅 엔진)</h4>
-          <p>OSRM 기반 커스터마이징</p>
-          <p style="font-size:22px; font-weight:800; color:var(--accent); margin-top:8px;">30%↑ 성능</p>
+        <div class="card-v2">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h4>Routomile</h4>
+          </div>
+          <p>자체 OSRM 기반 라우팅 엔진</p>
+          <div class="big-num">30%↑</div>
+          <p style="font-size:10px; color:var(--gray-500);">오픈소스 대비 성능 향상</p>
         </div>
-        <div class="card">
-          <h4>AI 배차 알고리즘</h4>
+        <div class="card-v2 accent">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <h4>AI 배차 알고리즘</h4>
+          </div>
           <p>4년간 축적된 운영 데이터 기반</p>
-          <p style="font-size:22px; font-weight:800; color:var(--accent); margin-top:8px;">95% 정확도</p>
+          <div class="big-num">95%</div>
+          <p style="font-size:10px; color:var(--gray-500);">목표 도착시간 정확도 (±5분)</p>
         </div>
-        <div class="card">
-          <h4>멀티테넌트 SaaS</h4>
+        <div class="card-v2 green">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-server"></i></div>
+            <h4>멀티테넌트 SaaS</h4>
+          </div>
           <p>고객사별 데이터 완전 격리</p>
-          <p style="font-size:22px; font-weight:800; color:var(--accent); margin-top:8px;">99.9% 가용성</p>
+          <div class="big-num">99.9%</div>
+          <p style="font-size:10px; color:var(--gray-500);">시스템 가용성 보장</p>
         </div>
       </div>
 
@@ -482,11 +647,13 @@ p.page-desc {
         <span class="tag">OSRM</span>
         <span class="tag">PostgreSQL</span>
         <span class="tag">AWS/GCP</span>
-        <span class="tag">React</span>
-        <span class="tag">Flutter</span>
-        <span class="tag">Python</span>
-        <span class="tag">Go</span>
+        <span class="tag outline">React</span>
+        <span class="tag outline">Flutter</span>
+        <span class="tag outline">Python</span>
+        <span class="tag outline">Go</span>
       </div>
+
+      <div class="brand-watermark">MOBILIGENT</div>
       <div class="page-num">4</div>
     </div>
   </div>
@@ -496,28 +663,42 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 7 — 트랙션 & 파트너십</div>
   <div class="slide">
-    <div class="slide-inner slide-content">
-      <div class="s-title"><i class="fas fa-handshake"></i> 검증된 실행력</div>
+    <div class="slide-inner content">
+      <div class="brand-bar"></div>
+      <div class="s-title">
+        <div class="icon-circle"><i class="fas fa-handshake"></i></div>
+        <h2>검증된 실행력</h2>
+        <div class="subtitle-line"></div>
+      </div>
 
       <div class="card-row">
-        <div class="card">
-          <h4>KD 운송그룹</h4>
+        <div class="card-v2">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-bus"></i></div>
+            <h4>KD 운송그룹</h4>
+          </div>
           <ul>
-            <li>구축비 <b>6억원</b> 계약 체결 중</li>
-            <li>시내 DRT + 시외 DRT + 통근버스 통합</li>
+            <li>구축비 <b style="color:var(--accent);">6억원</b> 계약 체결 중</li>
+            <li>시내 DRT + 시외 DRT + 통근버스</li>
             <li>파일럿: 경기도 여주시 (2026.06)</li>
           </ul>
         </div>
-        <div class="card">
-          <h4>현대자동차 Shucle</h4>
+        <div class="card-v2 accent">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-car"></i></div>
+            <h4>현대자동차 Shucle</h4>
+          </div>
           <ul>
-            <li>Shucle DRT 신규 지역 오픈</li>
+            <li>신규 지역 서비스 오픈</li>
             <li>운영관리 협업 수행 중</li>
             <li>서비스 최적화 노하우 축적</li>
           </ul>
         </div>
-        <div class="card">
-          <h4>전국밴협 (Delicar)</h4>
+        <div class="card-v2 green">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-plane-departure"></i></div>
+            <h4>전국밴협 (Delicar)</h4>
+          </div>
           <ul>
             <li>공항 콜밴 플랫폼 구축</li>
             <li>MOU 체결 (2026.01)</li>
@@ -527,19 +708,24 @@ p.page-desc {
       </div>
 
       <div class="stat-row">
-        <div class="stat-card">
-          <div class="number">v1.0</div>
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="number" style="font-size:22px;">v1.0</div>
           <div class="label">Camomile 개발 완료</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
           <div class="number">95%</div>
           <div class="label">AI 배차 정확도</div>
         </div>
-        <div class="stat-card">
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-tachometer-alt"></i></div>
           <div class="number">30%↑</div>
-          <div class="label">Routomile 성능 향상</div>
+          <div class="label">Routomile 성능</div>
         </div>
       </div>
+
+      <div class="brand-watermark">MOBILIGENT</div>
       <div class="page-num">7</div>
     </div>
   </div>
@@ -549,39 +735,67 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 8 — 팀</div>
   <div class="slide">
-    <div class="slide-inner slide-content">
-      <div class="s-title"><i class="fas fa-users"></i> 모빌리티 × AI 결합 전문가</div>
+    <div class="slide-inner content">
+      <div class="brand-bar"></div>
+      <div class="s-title">
+        <div class="icon-circle"><i class="fas fa-users"></i></div>
+        <h2>모빌리티 × AI 결합 전문가</h2>
+        <div class="subtitle-line"></div>
+      </div>
 
       <div class="profile-row">
-        <div class="profile">
-          <div class="name">정규홍</div>
-          <div class="role">CEO | 모빌리티·핀테크 20년</div>
-          <ul>
-            <li>모바일 T-Money 결제 개척자</li>
-            <li>대기업 모빌리티 사업 총괄</li>
-          </ul>
+        <div class="profile-v2">
+          <div class="profile-avatar">정</div>
+          <div class="profile-info">
+            <div class="name">정규홍</div>
+            <div class="role">CEO</div>
+            <span class="exp-badge">20년 경력</span>
+            <ul>
+              <li>모바일 T-Money 결제 개척자</li>
+              <li>대기업 모빌리티 사업 총괄</li>
+            </ul>
+          </div>
         </div>
-        <div class="profile">
-          <div class="name">정규민</div>
-          <div class="role">CTO | IBM 연구원 출신 15년</div>
-          <ul>
-            <li>클라우드·AI 인프라 전문가</li>
-            <li>삼성전자, SK하이닉스, KT 기업고객</li>
-            <li>65% 클라우드 비용 절감 실적</li>
-          </ul>
+        <div class="profile-v2">
+          <div class="profile-avatar">정</div>
+          <div class="profile-info">
+            <div class="name">정규민</div>
+            <div class="role">CTO</div>
+            <span class="exp-badge">IBM 15년</span>
+            <ul>
+              <li>클라우드·AI 인프라 전문가</li>
+              <li>삼성전자, SK하이닉스, KT</li>
+              <li>65% 클라우드 비용 절감 실적</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="two-col">
-        <div class="card">
-          <h4>현재 팀 (6명)</h4>
+      <div class="card-row">
+        <div class="card-v2">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-user-friends"></i></div>
+            <h4>현재 팀 (6명)</h4>
+          </div>
           <p>경영 2 + 사업개발 2 + 디자인/기획 1 + 운영/CS 1</p>
         </div>
-        <div class="card accent">
-          <h4>채용 계획</h4>
-          <p>2026 하반기: 개발자 3 + 영업 2<br>2027년 말: <b>20명</b> 목표</p>
+        <div class="card-v2 accent">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-user-plus"></i></div>
+            <h4>채용 계획</h4>
+          </div>
+          <p>'26 하반기: 개발자 3 + 영업 2<br>'27년 말: <b style="color:var(--accent);">20명</b> 목표</p>
+        </div>
+        <div class="card-v2 green">
+          <div class="card-header">
+            <div class="card-icon"><i class="fas fa-network-wired"></i></div>
+            <h4>네트워크</h4>
+          </div>
+          <p>KD 독점 파트너십<br>MOSTUP 18개사 연합 리더</p>
         </div>
       </div>
+
+      <div class="brand-watermark">MOBILIGENT</div>
       <div class="page-num">8</div>
     </div>
   </div>
@@ -591,49 +805,67 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 9 — 성장 로드맵</div>
   <div class="slide">
-    <div class="slide-inner slide-content">
-      <div class="s-title"><i class="fas fa-road"></i> 성장 로드맵 & 재무 목표</div>
+    <div class="slide-inner content">
+      <div class="brand-bar"></div>
+      <div class="s-title">
+        <div class="icon-circle"><i class="fas fa-road"></i></div>
+        <h2>성장 로드맵 & 재무 목표</h2>
+        <div class="subtitle-line"></div>
+      </div>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <h4>2026 Foundation</h4>
-          <ul>
-            <li>KD 파일럿 성공 (여주)</li>
-            <li>서울 오피스 확보</li>
-            <li>고객사 3개, 차량 50대</li>
-          </ul>
-          <div class="revenue">6억원</div>
+      <div class="timeline-v2">
+        <div class="tl-item current">
+          <div class="tl-node">2026</div>
+          <div class="tl-body">
+            <h4>Foundation</h4>
+            <ul>
+              <li>KD 파일럿 성공 (여주)</li>
+              <li>서울 오피스 확보</li>
+              <li>고객사 3개, 차량 50대</li>
+            </ul>
+            <div class="revenue">6억원</div>
+          </div>
         </div>
-        <div class="timeline-item active">
-          <h4>2027 Growth</h4>
-          <ul>
-            <li>경기도 10개 도시 확장</li>
-            <li>시리즈A 30억원 유치</li>
-            <li>고객사 15개, 차량 500대</li>
-          </ul>
-          <div class="revenue">50억원</div>
+        <div class="tl-item growth">
+          <div class="tl-node">2027</div>
+          <div class="tl-body">
+            <h4>Growth</h4>
+            <ul>
+              <li>경기도 10개 도시 확장</li>
+              <li>시리즈A 30억 유치</li>
+              <li>고객사 15개, 차량 500대</li>
+            </ul>
+            <div class="revenue">50억원</div>
+          </div>
         </div>
-        <div class="timeline-item future">
-          <h4>2028 Scale</h4>
-          <ul>
-            <li>전국 확산 + 해외 조사</li>
-            <li>데이터 플랫폼 론칭</li>
-            <li>전국 20개 시군</li>
-          </ul>
-          <div class="revenue">70억원+</div>
+        <div class="tl-item future">
+          <div class="tl-node">2028</div>
+          <div class="tl-body">
+            <h4>Scale</h4>
+            <ul>
+              <li>전국 확산 + 해외 조사</li>
+              <li>데이터 플랫폼 론칭</li>
+              <li>전국 20개 시군</li>
+            </ul>
+            <div class="revenue">70억원+</div>
+          </div>
         </div>
       </div>
 
-      <div class="stat-row" style="margin-top: 20px;">
-        <div class="stat-card">
-          <div class="number">6 → 20명</div>
+      <div class="stat-row">
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-user-plus"></i></div>
+          <div class="number" style="font-size:24px;">6 → 20명</div>
           <div class="label">직접 고용 (2027)</div>
         </div>
-        <div class="stat-card">
-          <div class="number">200명</div>
+        <div class="stat-card-v2">
+          <div class="stat-icon"><i class="fas fa-hard-hat"></i></div>
+          <div class="number" style="font-size:24px;">200명</div>
           <div class="label">간접 고용 (기사·운영)</div>
         </div>
       </div>
+
+      <div class="brand-watermark">MOBILIGENT</div>
       <div class="page-num">9</div>
     </div>
   </div>
@@ -643,35 +875,49 @@ p.page-desc {
 <div class="slide-wrapper">
   <div class="slide-label">슬라이드 10 — 마무리</div>
   <div class="slide">
-    <div class="slide-inner slide-end">
-      <div class="company" style="font-size:36px; font-weight:800; margin-bottom:20px;">서울창업허브 성수와 함께<br>성장합니다</div>
-      <div class="msg">"모빌리전트는 기술로 이동의 자유를 실현합니다.<br>서울창업허브 성수와 함께 대한민국 교통약자의 미래를 바꾸겠습니다."</div>
-      <div class="contact">
-        contact@mobiligent.io | 010-5340-2164<br>
-        주식회사 모빌리전트
+    <div class="slide-inner end">
+      <div class="end-content">
+        <div class="end-title">서울창업허브 성수와 함께<br>성장합니다</div>
+        <div class="end-divider"></div>
+        <div class="end-msg">"모빌리전트는 기술로 이동의 자유를 실현합니다.<br>서울창업허브 성수와 함께 대한민국 교통약자의 미래를 바꾸겠습니다."</div>
+        <div class="end-contact">
+          contact@mobiligent.io | 010-5340-2164<br>
+          주식회사 모빌리전트
+        </div>
       </div>
       <div class="page-num white">10</div>
     </div>
   </div>
 </div>
 
-<!-- ═══ 컬러 팔레트 참고 ═══ -->
+<!-- ═══ 컬러 팔레트 ═══ -->
 <div class="slide-wrapper">
-  <div class="slide-label">참고 — 컬러 팔레트 & 디자인 요소</div>
-  <div style="background:#fff; border-radius:8px; padding:32px; box-shadow: 0 4px 24px rgba(0,0,0,0.12);">
-    <div style="display:flex; gap:12px; margin-bottom:20px;">
-      <div style="width:80px; height:60px; background:#1B3A5C; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px;">Navy<br>#1B3A5C</div>
-      <div style="width:80px; height:60px; background:#2A6496; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px;">Blue<br>#2A6496</div>
-      <div style="width:80px; height:60px; background:#4A8BC2; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px;">Light<br>#4A8BC2</div>
-      <div style="width:80px; height:60px; background:#E8F0F8; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#374151; font-size:10px;">Pale<br>#E8F0F8</div>
-      <div style="width:80px; height:60px; background:#D4943A; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px;">Accent<br>#D4943A</div>
-      <div style="width:80px; height:60px; background:#111827; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px;">Text<br>#111827</div>
-      <div style="width:80px; height:60px; background:#6B7280; border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:10px;">Gray<br>#6B7280</div>
+  <div class="slide-label">참고 — 컬러 팔레트 & 디자인 요소 정리</div>
+  <div style="background:#fff; border-radius:12px; padding:32px; box-shadow: var(--shadow-lg);">
+
+    <h3 style="font-size:16px; color:var(--navy); margin-bottom:16px;">컬러 팔레트</h3>
+    <div class="palette">
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--navy);"></div><div class="palette-name">Navy (메인)</div><div class="palette-hex">#1B3A5C</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--blue);"></div><div class="palette-name">Blue (포인트)</div><div class="palette-hex">#2A6496</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--blue-light);"></div><div class="palette-name">Blue Light</div><div class="palette-hex">#4A8BC2</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--blue-pale);"></div><div class="palette-name">Blue Pale</div><div class="palette-hex">#E8F0F8</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--accent);"></div><div class="palette-name">Accent (강조)</div><div class="palette-hex">#D4943A</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--green);"></div><div class="palette-name">Green (긍정)</div><div class="palette-hex">#10B981</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--red);"></div><div class="palette-name">Red (문제)</div><div class="palette-hex">#EF4444</div></div>
+      <div class="palette-item"><div class="palette-swatch" style="background:var(--gray-900);"></div><div class="palette-name">Text</div><div class="palette-hex">#111827</div></div>
     </div>
-    <div style="font-size:13px; color:#374151; line-height:2;">
-      <b>제목</b>: 28-36px, Bold 800, Navy — <b>본문</b>: 12-14px, Regular, Gray-700 — <b>강조 숫자</b>: 22-36px, Bold, Accent(골드)<br>
-      <b>카드 배경</b>: Blue-Pale + 좌측 4px Blue 보더 — <b>표 헤더</b>: Navy 배경 + White 텍스트<br>
-      <b>표지/마지막</b>: Navy 그라데이션 배경 — <b>내용 슬라이드</b>: White 배경
+
+    <h3 style="font-size:16px; color:var(--navy); margin-bottom:12px; margin-top:24px;">디자인 구성 요소</h3>
+    <div style="font-size:12px; color:var(--gray-700); line-height:2.2;">
+      <b>제목</b>: 아이콘 원형 배지 + 26px Bold Navy + 우측 그라데이션 밑줄<br>
+      <b>KPI 카드</b>: 네이비 그라데이션 배경, 원형 아이콘, 골드 대형 숫자, 그림자<br>
+      <b>정보 카드</b>: 화이트 배경, 좌측 4px 컬러 보더, 아이콘+제목 헤더, 둥근 모서리, 그림자<br>
+      <b>카드 색상 코드</b>: 블루(기본/기술) | 골드(강조/핵심) | 그린(긍정/성과) | 레드(문제/경고)<br>
+      <b>다이어그램</b>: 원형 아이콘 배지(상단) → 코어 엔진 바(중앙) → 하단 요소. 화살표로 흐름 표시<br>
+      <b>프로필</b>: 이니셜 아바타 + 경력 골드 배지 + 좌측 정렬 정보<br>
+      <b>타임라인</b>: 수평 원형 노드(연도) + 카드 + 매출 강조 숫자. 색상으로 시간 구분<br>
+      <b>표지/마지막</b>: 네이비 그라데이션 + 반투명 원형 장식 + 골드 디바이더<br>
+      <b>브랜드 요소</b>: 상단 5px 그라데이션 바 + 좌하단 워터마크 (내용 슬라이드)
     </div>
   </div>
 </div>
