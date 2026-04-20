@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모빌리전트 사업계획서 — 서울창업허브 성수 입주 v2.0</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 210mm; margin: 0 auto; background: #f0f0f0; }
+  body {
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Nanum Gothic', sans-serif;
+    color: #111827; font-size: 11pt; line-height: 1.55;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    word-break: keep-all; word-wrap: break-word;
+  }
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 15mm 18mm 15mm 18mm;
+    background: #FFFFFF;
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+  .page:last-child { page-break-after: auto; }
+  .page::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: #1A56DB;
+  }
+  .page-number {
+    position: absolute; bottom: 8mm; right: 18mm;
+    font-size: 11pt; color: #9CA3AF;
+  }
+  .page-logo {
+    font-size: 9pt; font-weight: 700; color: #1A56DB; letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+  h2 { font-size: 16pt; font-weight: 700; color: #111827; margin-bottom: 8px; line-height: 1.3; }
+  h3 { font-size: 13pt; font-weight: 700; color: #1A56DB; margin-bottom: 5px; line-height: 1.3; margin-top: 14px; }
+  h4 { font-size: 12pt; font-weight: 700; color: #1A56DB; margin-bottom: 3px; margin-top: 12px; }
+  .page-compact h3 { margin-top: 6px; margin-bottom: 3px; }
+  .page-compact h4 { margin-top: 5px; margin-bottom: 2px; }
+  .page-compact .lv2 { margin-top: 1px; margin-bottom: 1px; }
+  .page-compact .lv3 { margin-top: 0; margin-bottom: 0; }
+  .page-compact table { margin-bottom: 4px; font-size: 10.5pt; }
+  .page-compact td { padding: 3px 8px; }
+  .page-compact th { padding: 4px 8px; font-size: 10.5pt; }
+  .section-intro { font-size: 11pt; color: #4B5563; margin-bottom: 10px; line-height: 1.55; }
+  .highlight { color: #1A56DB; font-weight: 700; }
+  .lv1 { margin: 4px 0 2px 0; font-weight: 600; padding-left: 1.3em; text-indent: -1.3em; }
+  .lv1::before { content: "\25A0\00a0"; color: #1A56DB; }
+  .lv2 { margin: 2px 0 1px 16px; padding-left: 1.3em; text-indent: -1.3em; }
+  .lv2::before { content: "\25CB\00a0"; color: #1A56DB; }
+  .lv3 { margin: 1px 0 1px 32px; color: #374151; padding-left: 1em; text-indent: -1em; }
+  .lv3::before { content: "- "; color: #6B7280; }
+  .info-box { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 4px; padding: 8px 10px; margin-bottom: 6px; }
+  .accent-box { border-left: 3px solid #1A56DB; background: #F9FAFB; padding: 6px 10px; margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 11pt; margin-bottom: 8px; }
+  th { background: #1A56DB; color: #fff; padding: 5px 8px; text-align: left; font-weight: 600; font-size: 11.5pt; }
+  td { padding: 5px 8px; border-bottom: 1px solid #E5E7EB; vertical-align: top; }
+  tr:nth-child(even) td { background: #F9FAFB; }
+  ul { margin: 0 0 6px 16px; }
+  ul li { margin-bottom: 2px; }
+  ol { margin: 0 0 6px 16px; }
+  ol li { margin-bottom: 2px; }
+  .divider { border: none; border-top: 1px solid #E5E7EB; margin: 8px 0; }
+  .diagram-row { display: flex; gap: 4px; margin-bottom: 4px; }
+  .diagram-cell { flex: 1; text-align: center; padding: 5px 4px; border-radius: 3px; font-size: 11.5pt; font-weight: 600; }
+  .diagram-cell-dark { background: #1A56DB; color: #fff; }
+  .diagram-cell-light { background: #EFF6FF; color: #1A56DB; border: 1px solid #BFDBFE; }
+  .diagram-cell-core { background: linear-gradient(135deg, #1A56DB, #3B82F6); color: #fff; text-align: center; padding: 7px 10px; border-radius: 4px; font-size: 12pt; font-weight: 700; margin-bottom: 4px; }
+  .arrow-down { text-align: center; font-size: 11pt; color: #1A56DB; line-height: 1.2; }
+  @media print {
+    html, body { width: 210mm; background: #fff; margin: 0; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: 0. 핵심 요약 ==================== -->
+<div class="page page-compact">
+  <div style="text-align:center; margin-bottom:12px;">
+    <div style="font-size:12pt; font-weight:700; color:#1A56DB; letter-spacing:2px; margin-bottom:6px;">MOBILIGENT</div>
+    <div style="font-size:18pt; font-weight:800; color:#111827; margin-bottom:4px; line-height:1.3;">모빌리전트 사업계획서</div>
+    <div style="font-size:12pt; color:#4B5563; margin-bottom:6px;">서울창업허브 성수 입주 지원 | 2026년 4월</div>
+    <div style="width:40px; height:2px; background:#1A56DB; margin:0 auto 6px;"></div>
+    <p style="font-size:11pt; color:#111827; font-weight:600;">Age-Tech 기반 통합 모빌리티 플랫폼으로 교통약자 이동 문제를 해결하는 데이터 중심 기업</p>
+  </div>
+
+  <h2 style="font-size:14pt; margin-bottom:6px;">0. 핵심 요약</h2>
+
+  <h3 style="margin-top:0; margin-bottom:4px;">0.1 한눈에 보는 모빌리전트</h3>
+  <table style="margin-bottom:8px; font-size:10.5pt;">
+    <tbody>
+      <tr><td style="width:110px; font-weight:700; color:#1A56DB; background:#F9FAFB;">해결 과제</td><td style="background:#F9FAFB;">고령사회 이동권 문제, 지역 대중교통 공백, 운송사 유휴자산 비효율, 기존 플랫폼 종속</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB;">핵심 솔루션</td><td>DRT·통근버스·콜밴·택시를 하나의 플랫폼에서 운영하는 통합 모빌리티 플랫폼 <strong>Camomile</strong></td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB; background:#F9FAFB;">Age-Tech</td><td style="background:#F9FAFB;">다중 호출 수단, 시니어 맞춤 UI/UX, 보호자 연동, 복지시설 연계 — 성수 특화분야 가점</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB;">검증 실적</td><td>셔클 7개 지역 운영관리, 타보소 회원 31,370명/월 2만건, KD 5,500대 파트너십, 특허 12건</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB; background:#F9FAFB;">단기 목표</td><td style="background:#F9FAFB;"><strong>2026년 매출 7.8억원</strong>, Pre-Series A 10억원, 핵심인력 4명 채용, 수도권 B2G/B2B</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-bottom:4px;">0.2 성수 평가기준 정합성</h3>
+  <table style="margin-bottom:8px; font-size:10.5pt;">
+    <thead><tr><th style="width:30%;">평가항목 (배점)</th><th style="width:35%;">모빌리전트 강점</th><th>강조 포인트</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">시장성 (30점)</td><td>고령화·DRT 확대·운송사 DX 구조적 수요</td><td>시장 규모, 고객별 가치제안, 파이프라인</td></tr>
+      <tr><td style="font-weight:700;">성장가능성 (30점)</td><td>검증된 실적, 매출 목표, 투자 계획</td><td>매출 건별 분해, 투자유치 로드맵, 고용</td></tr>
+      <tr><td style="font-weight:700;">사업계획 적정성 (20점)</td><td>문제-솔루션-BM-실행 연결 구조</td><td>플랫폼 구조, 수익모델, 12개월 실행계획</td></tr>
+      <tr><td style="font-weight:700;">특화분야 기여도 (10점)</td><td>Age-Tech 내재 설계, 현장 실증 데이터</td><td>4장 전체, 셔클 고령자 44.3% 데이터</td></tr>
+      <tr><td style="font-weight:700;">지원 필요성 (10점)</td><td>성수 입주 = 투자·영업·채용 직결</td><td>성수·왕십리·장한평 3대 거점, 허브 활용</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-bottom:4px;">0.3 입주 후 12개월 핵심 KPI</h3>
+  <table style="font-size:10.5pt;">
+    <thead><tr><th style="width:22%;">구분</th><th>목표</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">투자유치</td><td>IR 20회 이상, Pre-Series A 10억원 추진</td></tr>
+      <tr><td style="font-weight:700;">고객확보</td><td>지자체/운송사 신규 계약 2건 이상, 실증/PoC 2건 이상</td></tr>
+      <tr><td style="font-weight:700;">매출</td><td>2026년 연매출 7.8억원 달성</td></tr>
+      <tr><td style="font-weight:700;">고용</td><td>개발 2명, AI/데이터 1명, 영업/마케팅 1명 등 핵심인력 4명 확충</td></tr>
+      <tr><td style="font-weight:700;">사업확장</td><td>DRT·콜밴·통근 서비스 고도화 및 수도권 거점 구축</td></tr>
+    </tbody>
+  </table>
+
+  <span class="page-number">1/11</span>
+</div>
+
+<!-- ==================== PAGE 2: 1. 기업 개요 ==================== -->
+<div class="page" style="display:flex; flex-direction:column; justify-content:flex-start; padding-top:18mm;">
+  <div style="text-align:center; margin-bottom:14px;">
+    <div style="font-size:9pt; font-weight:700; color:#1A56DB; letter-spacing:1.5px; margin-bottom:8px;">MOBILIGENT</div>
+    <p style="font-size:11pt; color:#111827; font-weight:600;">한국형 MaaS(Mobility as a Service, 통합 모빌리티 서비스) 생태계를 선도하는 데이터 중심 모빌리티 플랫폼 기업</p>
+  </div>
+
+  <h2>1. 기업 개요</h2>
+
+  <h3 style="margin-top:0; margin-bottom:6px;">1.1 기업 정보</h3>
+  <table style="margin-bottom:10px;">
+    <tbody>
+      <tr><td style="width:100px; font-weight:700; color:#1A56DB; background:#F9FAFB;">회사명</td><td style="background:#F9FAFB;">주식회사 모빌리전트 (Mobiligent Inc.)</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB;">설립일</td><td>2019년 8월 7일</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB; background:#F9FAFB;">대표이사</td><td style="background:#F9FAFB;">정규홍</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB;">소재지</td><td>본사: 경상북도 포항시 남구 청암로 87<br>서울연구소: 서울특별시 영등포구 여의공원로 115</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB; background:#F9FAFB;">비전</td><td style="background:#F9FAFB;">한국형 MaaS 생태계를 선도하는 데이터 중심 모빌리티 플랫폼 기업</td></tr>
+      <tr><td style="font-weight:700; color:#1A56DB;">미션</td><td>운영지능(Operations Intelligence)으로 수요-공급 최적화 및 신뢰 기반 이동 경험 혁신</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-bottom:4px;">1.2 대표이사 프로필</h3>
+  <p class="lv1">정규홍 대표 — 모빌리티·페이먼트 20년+ 경력</p>
+  <p class="lv2" style="margin-bottom:8px;">전 아우토크립트 상무(모빌리티 사업 총괄) / 전 마카롱택시 CTO / 전 티머니 PMO</p>
+
+  <h3 style="margin-bottom:6px;">1.3 3대 핵심 사업 및 2026년 집중 방향</h3>
+  <table style="margin-bottom:8px;">
+    <thead><tr><th style="width:18%;">사업</th><th style="width:42%;">내용</th><th>2026년 집중</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">Camomile 플랫폼</td><td>DRT·통근버스·콜밴·택시 통합 운영 플랫폼. 자체 AI 배차 엔진(Routomile), 멀티테넌트 SaaS</td><td><strong>★최우선</strong>: KD/NOVA 플랫폼 개발 완수 + 수도권 지자체 DRT 신규 수주</td></tr>
+      <tr><td style="font-weight:700;">딜리카(Delicar)</td><td>공항 콜밴 운영지능 SaaS. 항공편 연동 수요예측·배차 최적화. 전국콜밴조합 MOU(2026.01)</td><td>병행(실증): 26년 4Q 실증 완료 → 2027년 유상 전환</td></tr>
+      <tr><td style="font-weight:700;">타보소(Taboso)</td><td>DRT+택시 MaaS 플랫폼. 포항시 전국 최초 지역 택시 통합 모델 (회원 31,370명, 월 2만건)</td><td>고도화(지역 확장): 기존 서비스 고도화 및 레퍼런스 확보</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-bottom:4px;">1.4 지식재산권 현황</h3>
+  <p class="lv1">특허 등록 12건, 출원 1건, 상표 등록 1건(딜리카 DELICAR)</p>
+  <p class="lv2">6대 핵심 특허: MaaS 환승, 통합 내비게이션, 수화물 보관, IoT 관제, 보트 공유, EV 공유</p>
+
+  <span class="page-number">2/11</span>
+</div>
+
+<!-- ==================== PAGE 3: 2. 문제 정의 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>2. 문제 정의</h2>
+  <p class="lv1" style="margin-bottom:8px;">대한민국 3가지 구조적 문제가 교차 → 기존 솔루션으로 해결 불가</p>
+
+  <h3>2.1 고령사회의 이동 위기</h3>
+  <p class="lv1">초고령사회 진입 (2025년)</p>
+  <p class="lv2">65세 이상 1,000만명 돌파 → 전체 인구 20.6%</p>
+  <p class="lv2">2030년 25%, 2050년 40%까지 증가 전망</p>
+  <p class="lv1">교통약자 규모</p>
+  <p class="lv2">전국 1,746만명 (인구 33.7%) — 교통약자이동편의증진법 실태조사 기준</p>
+  <p class="lv2">기존 대중교통으로 이동 수요 충족 불가</p>
+  <p class="lv1">대중교통 공백 심화</p>
+  <p class="lv2">농어촌·중소도시 대중교통 공백 지역 확대, 야간·심야 이동수단 부재</p>
+  <p class="lv2" style="margin-bottom:10px;">장애인콜택시 대기시간 평균 30분+ → 고령화 가속 시 격차 심화 → 사회적 고립</p>
+
+  <h3>2.2 운송사의 구조적 비효율</h3>
+  <p class="lv1">자산 활용률 극도로 저조</p>
+  <p class="lv2">통근버스: 출퇴근 4시간만 운행, 나머지 6~8시간 유휴 방치</p>
+  <p class="lv2">기사·차량 실질 활용률 40% 미만</p>
+  <p class="lv1">디지털 전환 역량 부족</p>
+  <p class="lv2">수기 배차·전화 접수 의존 → 데이터 기반 의사결정 불가</p>
+  <p class="lv2" style="margin-bottom:10px;">유류비·인건비 상승 속 유휴 자산 수익화 수단 없음 → 경영 환경 지속 악화</p>
+
+  <h3>2.3 기존 플랫폼의 한계</h3>
+  <p class="lv1">빅테크 모빌리티 (카카오, 타다)</p>
+  <p class="lv2">수익성 중심 → 교통약자·농어촌 외면, 높은 수수료</p>
+  <p class="lv1">기존 DRT(Demand Responsive Transit, 수요응답형 교통) 플랫폼</p>
+  <p class="lv2">B2G 단일 구조, 데이터 플랫폼 종속, 커스터마이징 제한</p>
+  <p class="lv1">공공 복지콜 (장애인콜택시 등)</p>
+  <p class="lv2" style="margin-bottom:10px;">서비스 범위 제한, 대기시간 과다, 확장 불가</p>
+
+  <div style="display:flex; gap:8px; margin-top:10px;">
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:6px; padding:10px; text-align:center;">
+      <div style="font-size:12pt; font-weight:700; margin-bottom:4px;">고령사회</div>
+      <div style="font-size:11pt;">교통약자 1,746만명</div>
+    </div>
+    <div style="display:flex; align-items:center; font-size:16pt; color:#1A56DB; font-weight:700;">+</div>
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:6px; padding:10px; text-align:center;">
+      <div style="font-size:12pt; font-weight:700; margin-bottom:4px;">운송사 비효율</div>
+      <div style="font-size:11pt;">자산 활용률 40%</div>
+    </div>
+    <div style="display:flex; align-items:center; font-size:16pt; color:#1A56DB; font-weight:700;">+</div>
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:6px; padding:10px; text-align:center;">
+      <div style="font-size:12pt; font-weight:700; margin-bottom:4px;">플랫폼 한계</div>
+      <div style="font-size:11pt;">높은 수수료, 데이터 종속</div>
+    </div>
+  </div>
+  <div style="text-align:center; font-size:16pt; color:#1A56DB; font-weight:700; margin:6px 0;">&#9660;</div>
+  <div style="background:#EFF6FF; border:2px solid #1A56DB; border-radius:6px; padding:10px; text-align:center;">
+    <div style="font-size:13pt; font-weight:700; color:#1A56DB;">통합 모빌리티 플랫폼이 필요한 이유</div>
+    <div style="font-size:11pt; color:#374151;">교통약자 이동권 보장 + 운송사 유휴자산 활용 + 데이터 주권 확보</div>
+  </div>
+
+  <span class="page-number">3/11</span>
+</div>
+
+<!-- ==================== PAGE 4: 3. 솔루션 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>3. 솔루션 — Camomile 플랫폼</h2>
+  <p class="lv1" style="margin-bottom:6px;">DRT(시내/시외), 통근버스, 콜밴, 택시 등 다중 모빌리티를 하나의 플랫폼에서 운영하는 통합 솔루션</p>
+
+  <h3 style="margin-bottom:4px;">3.1 플랫폼 구조</h3>
+  <div style="margin-bottom:6px;">
+    <div style="font-size:11pt; color:#4B5563; font-weight:600; margin-bottom:2px;">서비스 레이어</div>
+    <div class="diagram-row">
+      <div class="diagram-cell diagram-cell-dark">시내 DRT</div>
+      <div class="diagram-cell diagram-cell-dark">시외 DRT</div>
+      <div class="diagram-cell diagram-cell-dark">통근버스</div>
+      <div class="diagram-cell diagram-cell-dark">콜밴</div>
+      <div class="diagram-cell diagram-cell-dark">택시</div>
+    </div>
+    <div class="arrow-down">&#9660;</div>
+    <div class="diagram-cell-core">AI 배차 엔진 Routomile (OSRM 기반) + 실시간 최적화</div>
+    <div class="arrow-down">&#9660;</div>
+    <div class="diagram-row">
+      <div class="diagram-cell diagram-cell-light">MSA 백엔드</div>
+      <div class="diagram-cell diagram-cell-light">멀티테넌트 SaaS</div>
+      <div class="diagram-cell diagram-cell-light">정책 기반 정산</div>
+      <div class="diagram-cell diagram-cell-light">보안/개인정보</div>
+    </div>
+    <div class="arrow-down">&#9660;</div>
+    <div class="diagram-row">
+      <div class="diagram-cell diagram-cell-light">승객 앱</div>
+      <div class="diagram-cell diagram-cell-light">기사 앱</div>
+      <div class="diagram-cell diagram-cell-light">관제 시스템</div>
+      <div class="diagram-cell diagram-cell-light">결제/정산</div>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <h3 style="margin-bottom:4px;">3.2 핵심 기술력</h3>
+  <h4>1) 자체 AI 배차 엔진 (Routomile)</h4>
+  <p class="lv2">Routomile 자체 라우팅 엔진 — 오픈소스 대비 30% 성능 향상</p>
+  <p class="lv3">다중 승객 합승 최적화, 실시간 경로 재계산, DRT 특화 수요응답형 배차 알고리즘</p>
+  <p class="lv3" style="margin-bottom:6px;">AI 배차 정확도 95% (±5분) / 외부 API 의존 없는 자체 엔진 → 비용 절감 + 커스터마이징 자유</p>
+  <h4>2) 멀티테넌트 SaaS 아키텍처</h4>
+  <p class="lv2">하나의 플랫폼으로 다수 지역·고객사 동시 운영</p>
+  <p class="lv3" style="margin-bottom:6px;">테넌트별 독립 설정(구역·요금·운영규칙) / 신규 지역 오픈 시 설정만으로 확장 / 화이트라벨 구조</p>
+  <h4>3) 데이터 주권 보장</h4>
+  <p class="lv2">운영 데이터(운행기록·배차로그·승객정보) 고객사 완전 소유</p>
+  <p class="lv3" style="margin-bottom:6px;">클라우드/온프레미스 선택 배포 / 안심번호·위치암호화·개인정보보호법 준수 기본 탑재</p>
+  <h4>4) 정책 기반 자동 정산</h4>
+  <p class="lv2">Rule Engine 기반 → D+3 정산을 D+1 익일정산으로 단축</p>
+  <p class="lv3" style="margin-bottom:6px;">운송사별·서비스별 차등 정산 정책 → 다자간 수익 배분 자동화</p>
+  <hr class="divider">
+  <h3 style="margin-bottom:4px;">3.3 범용 확장 구조</h3>
+  <p class="lv2">서비스 지역·차량 종류·승객 유형 제한 없는 범용 설계</p>
+  <p class="lv2">MSA(Micro Service Architecture) 모듈 구조 → 신규 서비스 유형 추가 시 코어 엔진 재사용</p>
+
+  <span class="page-number">4/11</span>
+</div>
+
+<!-- ==================== PAGE 5: 4. Age-Tech ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>4. Age-Tech 특화 전략</h2>
+  <div class="accent-box" style="padding:8px 14px; margin-bottom:10px;">
+    <p class="lv1">모든 서비스에 Age-Tech 관점 내재 설계 — 교통약자·대중교통 취약지역 개선 목적</p>
+    <p class="lv2">앱 이용 어려운 디지털 약자 → 전화 호출, 호출벨, 키오스크 동반 제공</p>
+  </div>
+
+  <h3>4.1 디지털 약자를 위한 다중 호출 수단</h3>
+  <p class="lv2">모바일 앱 + 전화 호출(ARS/상담원) + 호출벨(정류장 물리 버튼) + 키오스크(터치스크린)</p>
+  <p class="lv3" style="margin-bottom:4px;">셔클 DRT 농어촌 지역(양구, 제천 등) 전화 호출 비율 48.7% → 디지털 약자 접근성 현장 확인</p>
+  <p class="lv3" style="margin-bottom:8px;">셔클 DRT 농어촌 지역 고령자(70세 이상) 비율 평균 44.3% → Age-Tech 수요 확인</p>
+
+  <h3>4.2 시니어 맞춤 UI/UX</h3>
+  <p class="lv2">대형 버튼, 고대비 화면, 3단계 예약 플로우, 음성 안내·진동 피드백·글자 크기 조절</p>
+  <p class="lv3" style="margin-bottom:8px;">포항 '타보소' 시니어 이용자 피드백 기반 반복/단계적 개선</p>
+
+  <h3>4.3 보호자 연동 안심 서비스</h3>
+  <p class="lv2">승하차 시 보호자 실시간 알림 + 대리 호출·예약 + 운행 경로 실시간 공유</p>
+  <p class="lv3" style="margin-bottom:8px;">비상 상황 발생 시 보호자·관제센터 즉시 알림</p>
+
+  <h3>4.4 복지시설 및 의료기관 연계</h3>
+  <p class="lv2">병원·복지관·요양시설 원클릭 예약 연동 + 정기 통원 자동 배차</p>
+  <p class="lv3" style="margin-bottom:10px;">지자체 복지 바우처 연계 결제 → 교통약자 경제적 부담 경감</p>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:4px;">4.5 Age-Tech 서비스 흐름</h3>
+  <div style="display:flex; align-items:stretch; gap:4px; margin-bottom:8px;">
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:4px; padding:8px 4px; text-align:center; font-size:11pt; font-weight:600; display:flex; flex-direction:column; justify-content:center;">호출<br><span style="font-weight:400;">전화/벨/키오스크/앱</span></div>
+    <div style="color:#1A56DB; font-weight:700; display:flex; align-items:center;">→</div>
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:4px; padding:8px 4px; text-align:center; font-size:11pt; font-weight:600; display:flex; flex-direction:column; justify-content:center;">AI 배차<br><span style="font-weight:400;">Routomile 최적화</span></div>
+    <div style="color:#1A56DB; font-weight:700; display:flex; align-items:center;">→</div>
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:4px; padding:8px 4px; text-align:center; font-size:11pt; font-weight:600; display:flex; flex-direction:column; justify-content:center;">탑승<br><span style="font-weight:400;">기사 안내/확인</span></div>
+    <div style="color:#1A56DB; font-weight:700; display:flex; align-items:center;">→</div>
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:4px; padding:8px 4px; text-align:center; font-size:11pt; font-weight:600; display:flex; flex-direction:column; justify-content:center;">보호자 알림<br><span style="font-weight:400;">실시간 위치 공유</span></div>
+    <div style="color:#1A56DB; font-weight:700; display:flex; align-items:center;">→</div>
+    <div style="flex:1; background:#1A56DB; color:#fff; border-radius:4px; padding:8px 4px; text-align:center; font-size:11pt; font-weight:600; display:flex; flex-direction:column; justify-content:center;">하차 완료<br><span style="font-weight:400;">도착 알림 발송</span></div>
+  </div>
+
+  <h3 style="margin-bottom:4px;">4.6 기존 공공 복지콜 대비 개선점</h3>
+  <table style="margin-bottom:8px;">
+    <thead><tr><th style="width:25%;">항목</th><th style="width:37%;">기존 공공 복지콜</th><th>모빌리전트 Age-Tech</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">호출 방식</td><td>전화 단일 (긴 대기)</td><td>전화+호출벨+키오스크+앱 (다중)</td></tr>
+      <tr><td style="font-weight:700;">배차 시간</td><td>평균 30분~1시간+</td><td>AI 실시간 배차 (5~15분)</td></tr>
+      <tr><td style="font-weight:700;">서비스 범위</td><td>장애인 한정, 지역 제한</td><td>전 교통약자 대상, 범용 확장</td></tr>
+      <tr><td style="font-weight:700;">보호자 연동</td><td>없음</td><td>실시간 위치·승하차 알림</td></tr>
+    </tbody>
+  </table>
+
+  <span class="page-number">5/11</span>
+</div>
+
+<!-- ==================== PAGE 6: 5. 비즈니스 모델 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>5. 비즈니스 모델</h2>
+  <p class="lv1" style="margin-bottom:8px;">플랫폼 구축(초기 매출) → 운영 수수료(반복 매출) → 데이터 플랫폼(미래 매출) 3단계 수익 구조</p>
+
+  <h3>5.1 3단계 수익 구조</h3>
+  <h4>1단계: 플랫폼 구축 수익 (초기 매출)</h4>
+  <p class="lv2">지자체·운송사 대상 SaaS 라이선스 + 커스터마이징 구축</p>
+  <p class="lv3">건당 2~6억원 (플랫폼 라이선스 + 사업지 오픈 지원 + 관리자 교육)</p>
+  <p class="lv3" style="margin-bottom:8px;">멀티테넌트 구조 → 고객 추가 시 한계비용 감소, 수익성 개선</p>
+  <h4>2단계: 운영 수수료 (반복 매출)</h4>
+  <p class="lv2">차량당 월정 이용료 5~10만원 + 거래액 기반 수수료 (승객 운임의 5~10%)</p>
+  <p class="lv3">무상 유지보수 이후 연간 기술지원료 전환</p>
+  <p class="lv3" style="margin-bottom:8px;">고객사 사업 성장과 매출 성장 연동 → 장기 파트너십 유도, 이탈률 최소화</p>
+  <h4>3단계: 데이터 플랫폼 (미래 매출)</h4>
+  <p class="lv2">이동 패턴 분석 API → 지자체·연구기관 제공</p>
+  <p class="lv3" style="margin-bottom:8px;">의료 통원·시니어 이동 패턴 등 복지·헬스케어 연계 데이터 서비스 (2028년 이후 본격화)</p>
+
+  <hr class="divider">
+
+  <h3 style="margin-bottom:6px;">5.2 고객 유형별 수익 구조</h3>
+  <table>
+    <thead><tr><th>고객 유형</th><th>결제 방식</th><th>이용 규모</th><th>현재 상태</th></tr></thead>
+    <tbody>
+      <tr><td><strong>지자체</strong></td><td>구축비 + 월정 운영료</td><td>지역당 차량 20대+</td><td>셔클 DRT 7개+ 지역 운영, 자체 DRT 오픈 추진</td></tr>
+      <tr><td><strong>민간 운수사업자</strong></td><td>구축비 + 기술지원료</td><td>대형 운송 그룹 5,500대+</td><td>KD운송그룹(Nova) 계약, 전국콜밴조합 MOU</td></tr>
+      <tr><td><strong>기업 (통근)</strong></td><td>구축비 + 대당 월정료</td><td>통근 수요 대기업</td><td>제안 진행 중</td></tr>
+      <tr><td><strong>모빌리티 플랫폼사</strong></td><td>운영관리 수수료</td><td>플랫폼 운영 위탁</td><td>현대자동차 셔클 운영관리</td></tr>
+      <tr><td><strong>기사</strong></td><td>운임의 5~10% 수수료</td><td>택시·콜밴 운행 기사</td><td>타보소 운영, Delicar 실증 준비</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider">
+  <h3 style="margin-bottom:4px;">5.3 수익 모델의 핵심 강점</h3>
+  <p class="lv1">이중 수익 구조</p>
+  <p class="lv2">초기 구축비로 개발 비용 회수 + 운영 수수료로 안정적 MRR(Monthly Recurring Revenue, 월간 반복 매출) 확보</p>
+  <p class="lv1">복합 고객 포트폴리오</p>
+  <p class="lv2">B2G(지자체) + B2B(운송사, 기업) 동시 공략 → 매출 안정성 확보</p>
+
+  <span class="page-number">6/11</span>
+</div>
+
+<!-- ==================== PAGE 7: 6. 시장 분석 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>6. 시장 분석</h2>
+
+  <h3 style="margin-bottom:6px;">6.1 시장 규모</h3>
+  <table style="margin-bottom:12px;">
+    <thead><tr><th style="width:18%;">구분</th><th style="width:28%;">시장</th><th style="width:22%;">규모</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td><strong>전체 시장 규모 (TAM)</strong></td><td>국내 모빌리티 서비스</td><td>약 4.5조원</td><td>DRT 3,000억(2030) + 교통약자 2조 + B2B통근 2조 + 공항콜밴 1,900억</td></tr>
+      <tr><td><strong>접근 가능 시장 (SAM)</strong></td><td>지자체 DRT 구축+운영</td><td>420억</td><td>100개 지자체 × 3억 + 운영 120억</td></tr>
+      <tr><td><strong>단기 목표 시장 (SOM)</strong></td><td>2027년</td><td>50억</td><td>구축 30억 + 운영 20억 (시장점유율 12%)</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider">
+
+  <h3 style="margin-bottom:6px;">6.2 성장 동인</h3>
+  <h4>1) 정부 정책 드라이브</h4>
+  <p class="lv2">국토교통부: 2030년까지 전국 150개 지자체 DRT 확대 계획</p>
+  <p class="lv2">보건복지부: 교통약자 이동권 보장 의무화</p>
+  <p class="lv2" style="margin-bottom:8px;">과기정통부: AI·자율주행 실증 예산 연 3,000억원 편성</p>
+  <h4>2) 고령사회 가속화</h4>
+  <p class="lv2">2025년 초고령사회 진입 → 시니어 교통 복지 수요 폭증</p>
+  <p class="lv2" style="margin-bottom:8px;">교통약자 1,746만명 (인구 33.7%) → 공공 예산 지속 증가, 농어촌·중소도시 DRT 수요 급확대</p>
+  <h4>3) MaaS 확산</h4>
+  <p class="lv2">차량 소유 → 이동 서비스 구독 전환 가속</p>
+  <p class="lv2" style="margin-bottom:8px;">운송사 디지털 전환 없이 생존 어려운 시점 도달 / 포항 타보소 → 지역 택시 통합 MaaS 선행 사례</p>
+  <h4>4) 운송사 디지털 전환 압박</h4>
+  <p class="lv2">아날로그 배차 한계 → AI 자동화 필수 과제</p>
+  <p class="lv2">유휴 자산 활용 압박 → DRT 등 신규 서비스 도입 확대</p>
+  <p class="lv2">자체 디지털화 역량 없는 중소 운송사 → 플랫폼 파트너 수요 증가 (KD 계약이 실증 사례)</p>
+
+  <span class="page-number">7/11</span>
+</div>
+
+<!-- ==================== PAGE 8: 7. 고객 확보 전략 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>7. 고객 확보 전략과 경쟁력</h2>
+
+  <h3 style="margin-bottom:4px;">7.1 목표 고객별 전략</h3>
+  <table style="margin-bottom:6px;">
+    <thead><tr><th style="width:18%;">고객</th><th style="width:32%;">페인포인트</th><th style="width:30%;">가치 제안</th><th>타겟</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">지자체</td><td>높은 수수료, 데이터 종속</td><td>데이터 주권, 낮은 TCO</td><td>경기 31개+충청 40개 시군</td></tr>
+      <tr><td style="font-weight:700;">운송사·콜밴</td><td>유휴 자산, 낮은 수익성</td><td>활용률 85%↑, 추가 수익</td><td>KD 5,500대, 전국콜밴조합</td></tr>
+      <tr><td style="font-weight:700;">기업 통근</td><td>높은 통근비, 비효율 노선</td><td>비용 30%↓, 실시간 관제</td><td>반도체 클러스터 등</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-bottom:4px;">7.2 고객 파이프라인 현황</h3>
+  <table style="margin-bottom:8px;">
+    <thead><tr><th style="width:20%;">고객 유형</th><th style="width:30%;">현재 파이프라인</th><th style="width:20%;">접촉 단계</th><th>수주 전환 근거</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">지자체</td><td>셔클 7개 지역 운영관리+자체 DRT 오픈 추진</td><td>경기·충청 접촉</td><td>구축 플랫폼 경쟁력 + 운영 실적 레퍼런스</td></tr>
+      <tr><td style="font-weight:700;">운송사</td><td>KD 운송그룹 5,500대</td><td>계약 체결 중</td><td>통합 플랫폼 파트너십</td></tr>
+      <tr><td style="font-weight:700;">콜밴 조합</td><td>전국콜밴조합 MOU 체결</td><td>실증 준비 중</td><td>MOU → 실증 → 전국 확산</td></tr>
+      <tr><td style="font-weight:700;">기업 통근</td><td>KD 경유 대기업 제안</td><td>제안 단계</td><td>KD 파트너십 공동 수주</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider" style="margin:6px 0;">
+
+  <h3 style="margin-bottom:6px;">7.3 경쟁사 대비 차별화</h3>
+  <table>
+    <thead><tr><th style="width:18%;">구분</th><th style="width:30%;"><span style="color:#FFD700;">&#9733;</span> 모빌리전트</th><th>현대차 Shucle</th><th>카카오 모빌리티</th></tr></thead>
+    <tbody>
+      <tr><td><strong>서비스 범위</strong></td><td><strong>DRT+통근+콜밴+택시 통합</strong></td><td>B2G DRT+택시</td><td>택시·대리 중심</td></tr>
+      <tr><td><strong>데이터 소유</strong></td><td><strong>고객사 완전 소유</strong></td><td>플랫폼 종속</td><td>플랫폼 종속</td></tr>
+      <tr><td><strong>커스터마이징</strong></td><td><strong>100% 맞춤 구축</strong></td><td>표준화</td><td>표준화</td></tr>
+      <tr><td><strong>Age-Tech</strong></td><td><strong>핵심 내재 (다중호출)</strong></td><td>일부 반영</td><td>미반영</td></tr>
+      <tr><td><strong>핵심역량</strong></td><td><strong>플랫폼+운영 동시 수행</strong></td><td>현대차 그룹 자원</td><td>트래픽 기반</td></tr>
+      <tr><td><strong>가격 경쟁력</strong></td><td><strong>TCO 30%↓, SaaS+대당 월정료</strong></td><td>높은 초기 구축비</td><td>수수료 15~20%</td></tr>
+    </tbody>
+  </table>
+
+  <span class="page-number">8/11</span>
+</div>
+
+<!-- ==================== PAGE 9: 8. 사업 실적 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>8. 사업 실적</h2>
+  <p class="lv1" style="margin-bottom:8px;">국내 주요 모빌리티 기업·운송사와 전략적 파트너십 → 사업성 검증 완료</p>
+
+  <h3 style="margin-top:0;">8.1 Camomile 플랫폼 (기술 검증 완료)</h3>
+  <p class="lv2">Camomile v1.0 개발 완료 (2026 Q1)</p>
+  <p class="lv2">AI 배차 정확도 95% (목표 도착시간 ±5분)</p>
+  <p class="lv2" style="margin-bottom:5px;">Routomile 자체 라우팅 엔진: 오픈소스 대비 30% 성능 향상</p>
+
+  <h3>8.2 KD 운송그룹(Nova) — DRT·통근 통합 플랫폼 구축</h3>
+  <p class="lv2">KD 운송그룹(5,500대 버스) 파트너십 협력 체결</p>
+  <p class="lv2">시내DRT + 시외DRT + 통근버스 3개 서비스 통합 플랫폼 구축 계약 체결 중</p>
+  <p class="lv2" style="margin-bottom:5px;">파일럿: 경기도 내 지자체 준비 (2026.4Q), 이후 수도권 확장 협의 중</p>
+
+  <h3>8.3 셔클(Shucle) DRT — 현대자동차 협업</h3>
+  <p class="lv2">전국 7개 지역 서비스 오픈·운영관리 수행 중, 지역 추가 확장 중</p>
+  <p class="lv2" style="margin-bottom:5px;">지역: 검단(인천), 양구, 영덕, 영천, 울릉, 제천, 충북혁신</p>
+
+  <h3>8.4 타보소(Taboso) — 지역 MaaS 플랫폼</h3>
+  <p class="lv2">포항시 전국 최초 지역 택시 통합 모델 구축·운영</p>
+  <p class="lv2" style="margin-bottom:5px;">회원 31,370명, 월 호출 2만건</p>
+
+  <h3>8.5 딜리카(Delicar) — 공항 콜밴 SaaS</h3>
+  <p class="lv2">전국콜밴조합 MOU 체결 (2026.01), 실증사업 준비 중 (2026.3Q)</p>
+  <p class="lv2" style="margin-bottom:5px;">KPI 목표: 50대 운영, 월간 거래 4,500건, 배차 성공률 95%+, 정산 D+1</p>
+
+  <h3>8.6 기타 실적</h3>
+  <p class="lv2">18개사 모빌리티 연합(MOSTUP) 리더 — 2022년 결성, 모빌리티 스타트업 간 기술·사업 협력 및 공동 수주 민간 연합체</p>
+  <p class="lv2">국토부 스마트시티 챌린지 5년 연속 수행 / 제주 MaaS 구축·운영</p>
+
+  <hr class="divider">
+
+  <h3 style="margin-bottom:6px;">8.7 사업 실적 요약</h3>
+  <table>
+    <thead><tr><th>프로젝트</th><th>파트너</th><th>규모</th><th>핵심 수치</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Camomile</strong></td><td>자체 플랫폼</td><td>v1.0 완료</td><td>AI 배차 정확도 95%</td></tr>
+      <tr><td><strong>KD Nova</strong></td><td>KD 운송그룹</td><td>5,500대 파트너십</td><td>DRT+통근 통합 플랫폼 협의 중</td></tr>
+      <tr><td><strong>셔클 DRT</strong></td><td>현대자동차</td><td>전국 7개 지역</td><td>운영 전주기 수행</td></tr>
+      <tr><td><strong>타보소</strong></td><td>포항시</td><td>지역 DRT+택시 통합</td><td>회원 31,370명, 월 2만건</td></tr>
+      <tr><td><strong>딜리카</strong></td><td>전국콜밴조합 MOU</td><td>실증 준비 중</td><td>KPI 목표: 50대, 월 4,500건</td></tr>
+      <tr><td><strong>국토부 챌린지</strong></td><td>국토교통부</td><td>5년 연속</td><td>공공 모빌리티 역량 검증</td></tr>
+    </tbody>
+  </table>
+
+  <span class="page-number">9/11</span>
+</div>
+
+<!-- ==================== PAGE 10: 9. 성장 로드맵 ==================== -->
+<div class="page page-compact">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>9. 성장 로드맵</h2>
+
+  <h3 style="margin-top:0; margin-bottom:4px;">9.1 매출 성장 계획</h3>
+  <p style="font-weight:700; margin:3px 0; font-size:11pt;">연도별 매출 실적 (정부과제 포함)</p>
+  <table style="margin-bottom:6px;">
+    <thead><tr><th style="width:30%;">연도</th><th>매출</th></tr></thead>
+    <tbody>
+      <tr><td>2023년</td><td>약 2.8억원</td></tr>
+      <tr><td>2024년</td><td>약 4.8억원</td></tr>
+      <tr><td>2025년</td><td>약 2.6억원</td></tr>
+      <tr><td>2026년 (목표)</td><td><strong>7.8억원</strong></td></tr>
+    </tbody>
+  </table>
+  <p style="font-weight:700; margin:3px 0; font-size:11pt;">2026년 매출 구성 (건별)</p>
+  <table style="margin-bottom:6px;">
+    <thead><tr><th>매출원</th><th style="width:15%;">금액</th><th style="width:28%;">계약 상태</th><th>매출 인식</th></tr></thead>
+    <tbody>
+      <tr><td>현대차 셔클 오픈 컨설팅·위탁 운영</td><td>1.2억</td><td>계약 중</td><td>월별 분할 인식</td></tr>
+      <tr><td>KD/NOVA DRT·통근 플랫폼 개발</td><td>6.6억</td><td>세부 내용 협의 중</td><td>2026년 내 전액 인식 예정</td></tr>
+    </tbody>
+  </table>
+  <p style="font-weight:700; margin:3px 0; font-size:11pt;">매출 성장 로드맵</p>
+  <table style="margin-bottom:6px;">
+    <thead><tr><th style="width:15%;">구간</th><th style="width:18%;">매출 목표</th><th style="width:37%;">포커스</th><th>달성 근거</th></tr></thead>
+    <tbody>
+      <tr><td><strong>2026</strong></td><td>7.8억원</td><td>Camomile 레퍼런스 확보 (KD·셔클) + Delicar 실증</td><td>기확보 계약 기반 실행</td></tr>
+      <tr><td><strong>2027~2028</strong></td><td>연 50억원</td><td>수도권 지자체 3~5곳 + B2B 통근 2곳</td><td>KD·셔클 레퍼런스 기반 확산</td></tr>
+      <tr><td><strong>2029~2030</strong></td><td>연 200억원</td><td>전국 표준화 + 데이터 사업 + 해외 탐색</td><td>플랫폼 표준화 및 데이터 사업 본격화</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-bottom:3px;">9.2 매출 성장 시각화</h3>
+  <div style="display:flex; align-items:flex-end; gap:12px; height:60px; padding:2px 0; margin-bottom:4px;">
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+      <div style="font-size:11pt; font-weight:700; color:#1A56DB; margin-bottom:2px;">총 10억</div>
+      <div style="width:100%; height:10px; background:#93C5FD; border-radius:3px 3px 0 0;"></div>
+      <div style="font-size:11pt; color:#374151; margin-top:2px; font-weight:600;">'23~'25</div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+      <div style="font-size:11pt; font-weight:700; color:#1A56DB; margin-bottom:2px;">7.8억</div>
+      <div style="width:100%; height:8px; background:#1A56DB; border-radius:3px 3px 0 0;"></div>
+      <div style="font-size:11pt; color:#374151; margin-top:2px; font-weight:600;">2026</div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+      <div style="font-size:11pt; font-weight:700; color:#1A56DB; margin-bottom:2px;">연 50억</div>
+      <div style="width:100%; height:26px; background:#1A56DB; border-radius:3px 3px 0 0;"></div>
+      <div style="font-size:11pt; color:#374151; margin-top:2px; font-weight:600;">'27~'28</div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; align-items:center;">
+      <div style="font-size:11pt; font-weight:700; color:#1A56DB; margin-bottom:2px;">연 200억</div>
+      <div style="width:100%; height:50px; background:linear-gradient(to top, #1A56DB, #3B82F6); border-radius:3px 3px 0 0;"></div>
+      <div style="font-size:11pt; color:#374151; margin-top:2px; font-weight:600;">'29~'30</div>
+    </div>
+  </div>
+
+  <hr class="divider" style="margin:4px 0;">
+
+  <h3 style="margin-bottom:3px;">9.3 투자 유치 계획</h3>
+  <p class="lv2">Seed Round 완료 (자체자금 2억 + 정부지원금 1억)</p>
+  <p class="lv2" style="margin-bottom:3px;">Pre-Series A 10억(2026 하반기) → Series A 30억(2027 상반기) / 모빌리티 전문 VC 타겟</p>
+  <p class="lv1" style="font-size:11pt;">투자 전략 배경</p>
+  <p class="lv2">정부 과제·자체 수익 기반으로 기술·레퍼런스를 우선 검증한 뒤 외부 투자를 유치하는 전략을 선택</p>
+  <p class="lv2" style="margin-bottom:4px;">2026년은 KD 플랫폼 개발 완수와 수도권 영업 가속화를 위해 첫 외부 투자 유치 적기로 판단</p>
+
+  <h3 style="margin-bottom:3px;">9.4 글로벌 진출</h3>
+  <p class="lv2" style="margin-bottom:4px;">동남아 DRT 시장 진출 검토 (라오스, 베트남) — 멀티테넌트 구조로 별도 개발 없이 해외 런칭 가능</p>
+
+  <h3 style="margin-bottom:3px;">9.5 서울창업허브 입주 후 12개월 실행계획</h3>
+  <table>
+    <thead><tr><th style="width:18%;">시기</th><th style="width:55%;">핵심 실행 항목</th><th>목표 KPI</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">1~3개월</td><td>서울 오피스 셋업, 개발자 추가 채용, 투자 IR 개시, 지자체 방문 제안</td><td>채용 2명, IR 10회</td></tr>
+      <tr><td style="font-weight:700;">4~6개월</td><td>Pre-Series A 추진, 신규 고객사 계약, Camomile(DRT·콜밴) 실증 개시</td><td>투자 추진, 수주 1~2곳</td></tr>
+      <tr><td style="font-weight:700;">7~12개월</td><td>팀 확대, 추가 수주, Camomile 서비스 안정화, 연매출 목표 달성</td><td><strong>매출 7.8억</strong>, 팀 10명+</td></tr>
+    </tbody>
+  </table>
+
+  <span class="page-number">10/11</span>
+</div>
+
+<!-- ==================== PAGE 11: 10. 입주 필요성과 팀 ==================== -->
+<div class="page">
+  <div class="page-logo">MOBILIGENT</div>
+  <h2>10. 입주 필요성과 팀</h2>
+
+  <h3 style="margin-bottom:4px;">10.1 왜 서울창업허브 성수인가</h3>
+  <p class="lv1">서울 동부 모빌리티 산업 3대 거점의 교차 지점</p>
+  <p class="lv2"><strong>성수동</strong> — IT·스타트업·신산업 혁신지구 (투자사, 파트너, AI/개발 인재 밀집)</p>
+  <p class="lv2"><strong>왕십리</strong> — 미래형 모빌리티 거점 (자율주행·공유 모빌리티 클러스터)</p>
+  <p class="lv2"><strong>장한평</strong> — 자동차산업 생태계 재생거점 (운송사, 정비 인프라, 부품 생태계)</p>
+  <p class="lv1">포항 본사만으로는 물리적으로 어려운 수도권 고객 대응 + 투자 유치 → 서울 거점으로 실현</p>
+  <p class="lv2">현재 투자 미팅 월 1회 수준 → 성수 입주 시 주 2회 이상 가능 (투자사 밀집 지역)</p>
+  <p class="lv2" style="margin-bottom:10px;">서울 거점 확보 → 경기도 31개 시군 영업 커버리지 5배 확대</p>
+
+  <h3 style="margin-bottom:4px;">10.2 입주 기대효과</h3>
+  <table>
+    <thead><tr><th style="width:22%;">항목</th><th>기대효과</th></tr></thead>
+    <tbody>
+      <tr><td style="font-weight:700;">고객 접근성</td><td>수도권 지자체(경기 31개 시군) + 기업 고객 대면 영업 거점</td></tr>
+      <tr><td style="font-weight:700;">투자 유치</td><td>모빌리티·딥테크 전문 VC 네트워크 → 시리즈A 기반 구축</td></tr>
+      <tr><td style="font-weight:700;">인재 채용</td><td>서울권 AI/백엔드 개발자 채용 경쟁력 확보</td></tr>
+      <tr><td style="font-weight:700;">생태계 연결</td><td>성수 스타트업 커뮤니티 + 서울창업허브 보육 프로그램 활용</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider">
+
+  <h3 style="margin-bottom:6px;">10.3 핵심 인력 (6명)</h3>
+  <table>
+    <thead><tr><th style="width:22%;">구분</th><th>주요 경력</th></tr></thead>
+    <tbody>
+      <tr><td><strong>정규홍 CEO</strong></td><td>모빌리티·핀테크 경력 20년, 전 모바일 T-Money 결제 개척자, 전 대기업 모빌리티 사업 총괄</td></tr>
+      <tr><td><strong>정규민 CTO</strong></td><td>IBM 연구원 출신 15년, 클라우드·AI 인프라 전문가, AWS/GCP 멀티클라우드 아키텍트, 65% 클라우드 비용 절감 실적</td></tr>
+      <tr><td><strong>사업개발/수행 2명</strong></td><td>파트너십, 공공사업 제안, 투자유치, 사업관리</td></tr>
+      <tr><td><strong>디자인/기획 1명</strong></td><td>UI/UX, 서비스 기획</td></tr>
+      <tr><td><strong>운영/CS 1명</strong></td><td>셔클 DRT 지역 운영관리, 지자체·운수사 대응</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:6px; margin-bottom:4px;">10.4 조직 확장 계획 (2026년 하반기, 서울 진출 후)</h3>
+  <p class="lv2">백엔드 개발자 2명 + 프론트엔드 개발자 1명 + AI/데이터 엔지니어 1명 + 영업/마케팅 2명</p>
+  <p class="lv2">목표: 2027년 말 20명 규모</p>
+
+  <span class="page-number">11/11</span>
+</div>
+
+</body>
+</html>
